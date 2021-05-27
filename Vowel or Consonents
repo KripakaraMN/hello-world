@@ -1,5 +1,5 @@
-#include <stdio.h>
-
+#include<stdio.h>
+#include<conio.h>
 int main()
 {
     char ch;
@@ -41,6 +41,6 @@ int main()
         default: 
             printf("Consonant");
     }
-
+    getch();
     return 0;
 }
