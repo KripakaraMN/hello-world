@@ -1,0 +1,131 @@
+#include <stdio.h>
+int main()
+{
+  int r, c, a[10][10], b[10][10], sum[10][10], i, j;
+  printf("Enter the number of rows (between 1 and 10): ");
+  scanf("%d", &r);
+  printf("Enter the number of columns (between 1 and 10): ");
+  scanf("%d", &c);
+
+  printf("\nEnter elements of 1st matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+    {
+      printf("Enter element a%d%d: ", i + 1, j + 1);
+      scanf("%d", &a[i][j]);
+    }
+
+  printf("Enter elements of 2nd matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j)
+    {
+      printf("Enter element b%d%d: ", i + 1, j + 1);
+      scanf("%d", &b[i][j]);
+    }
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
+
+  printf("\nSum of two matrices: \n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("%d   ", sum[i][j]);
+      if (j == c - 1) {
+        printf("\n\n");
+      }
+    }
+
+  return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+int main(void)
+{
+  int
+    marks[3][4],
+    maxMark[3],
+    r, c;
+
+  for(r = 0; r < 3; r++)
+    {
+    printf("Enter marks of 4 students in Subject #%d: ", (r + 1));
+    for(c = 0; c < 4; c++)
+    {
+      scanf("%d", &marks[r][c]);
+    }
+  }
+
+  for(r = 0; r < 3; r++)
+    {
+    maxMark[r] = 0;
+    for(c = 0; c < 4; c++) {
+      if (marks[r][c] > maxMark[r]) {
+        maxMark[r] = marks[r][c];
+      }
+    }
+  }
+
+  printf("--- Max Marks ----\n");
+  for(r = 0; r < 3; r++)
+    {
+    printf("Max mark in Subject #%d is %d\n", (r + 1), maxMark[r]);
+  }
+  getch();
+  return 0;
+}
+
+
+
+
+#include <stdio.h>
+int main() {
+  int a[10][10], transpose[10][10], r, c;
+  printf("Enter number of rows and columns: ");
+  scanf("%d %d", &r, &c);
+
+  printf("\nEnter matrix elements:\n");
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    printf("Enter element a%d%d: ", i + 1, j + 1);
+    scanf("%d", &a[i][j]);
+  }
+
+  printf("\nEntered matrix: \n");
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    printf("%d  ", a[i][j]);
+    if (j == c - 1)
+    printf("\n");
+  }
+
+  for (int i = 0; i < r; ++i)
+  for (int j = 0; j < c; ++j) {
+    transpose[j][i] = a[i][j];
+  }
+
+  printf("\nTranspose of the matrix:\n");
+  for (int i = 0; i < c; ++i)
+  for (int j = 0; j < r; ++j) {
+    printf("%d  ", transpose[i][j]);
+    if (j == r - 1)
+    printf("\n");
+  }
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
